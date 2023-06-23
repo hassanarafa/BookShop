@@ -1,7 +1,6 @@
+import 'package:bookshop/rhemedata.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-import 'constants.dart';
 import 'features/splash/presentation/views/splashview.dart';
 
 void main() {
@@ -14,13 +13,7 @@ class BookShop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData().copyWith(
-          appBarTheme: const AppBarTheme(
-              elevation: 0,
-              systemOverlayStyle: SystemUiOverlayStyle(
-                  statusBarIconBrightness: Brightness.dark,
-                  statusBarColor: kPrimaryColor)),
-          scaffoldBackgroundColor: kPrimaryColor),
+      theme: theme,
       debugShowCheckedModeBanner: false,
       home: const Splashview(),
     );
