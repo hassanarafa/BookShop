@@ -7,10 +7,14 @@ class CustomListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: AspectRatio(
-          aspectRatio: 1.5,
-          child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(imagepath!))),
+          aspectRatio: 0.7,
+          child: Padding(
+            padding: const EdgeInsets.all(5),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  image: DecorationImage(image: AssetImage(imagepath!))),
+            ),
           )),
     );
   }

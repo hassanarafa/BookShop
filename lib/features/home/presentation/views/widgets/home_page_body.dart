@@ -7,8 +7,33 @@ class HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomListViewItem(
-      imagepath: "assets/images/41t7SIej5rL.SX316.SY480._SL500_.jpg",
+    return const ListViewBuild();
+  }
+}
+
+class ListViewBuild extends StatelessWidget {
+  const ListViewBuild({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    List<String> list = [
+      "assets/images/9781504074360.jpg",
+      "assets/images/9781504074377.jpg",
+      "assets/images/9781504074384.jpg",
+      "assets/images/9781504074445.jpg",
+      "assets/images/9781504084666.jpg"
+    ];
+    return SizedBox(
+      height: 300,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return CustomListViewItem(
+            imagepath: list[index],
+          );
+        },
+      ),
     );
   }
 }
