@@ -1,7 +1,6 @@
+import 'package:bookshop/core/utiliz/routes.dart';
 import 'package:bookshop/rhemedata.dart';
 import 'package:flutter/material.dart';
-
-import 'features/splash/presentation/views/splashview.dart';
 
 void main() {
   runApp(const BookShop());
@@ -12,10 +11,10 @@ class BookShop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: const Splashview(),
     );
   }
 }

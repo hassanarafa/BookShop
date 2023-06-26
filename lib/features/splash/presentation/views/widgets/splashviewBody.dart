@@ -1,9 +1,8 @@
 import 'dart:async';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bookshop/core/utiliz/assets.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../home/presentation/views/home.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -16,10 +15,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    Timer(
-        const Duration(seconds: 3),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const Homepage())));
+    Timer(const Duration(seconds: 3), () {
+      GoRouter.of(context).push("/homepage");
+    });
   }
 
   @override
