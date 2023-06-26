@@ -10,10 +10,6 @@ ThemeData theme = ThemeData(
         color: Colors.black,
         size: 27,
       ),
-      titleTextStyle: TextStyle(
-        color: Colors.black,
-        fontSize: 30,
-      ),
       backgroundColor: kPrimaryColor,
       elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle(

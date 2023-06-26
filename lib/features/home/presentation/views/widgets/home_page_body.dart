@@ -1,39 +1,33 @@
+import 'package:bookshop/core/utiliz/styles.dart';
 import 'package:flutter/material.dart';
 
-import 'CustomListViewItem.dart';
+import 'BestSellerListView.dart';
+import 'listviewbuild.dart';
 
 class HomePageBody extends StatelessWidget {
   const HomePageBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const ListViewBuild();
-  }
-}
-
-class ListViewBuild extends StatelessWidget {
-  const ListViewBuild({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    List<String> list = [
-      "assets/images/9781504074360.jpg",
-      "assets/images/9781504074377.jpg",
-      "assets/images/9781504074384.jpg",
-      "assets/images/9781504074445.jpg",
-      "assets/images/9781504084666.jpg"
-    ];
-    return SizedBox(
-      height: 300,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return CustomListViewItem(
-            imagepath: list[index],
-          );
-        },
-      ),
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const ListViewBuild(),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Text(
+                "Best Seller",
+                style: Styles.style2,
+              ),
+            ),
+            const BestSellerListView(),
+          ],
+        ))
+      ],
     );
   }
 }
