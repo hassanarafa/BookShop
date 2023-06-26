@@ -1,3 +1,4 @@
+import 'package:bookshop/core/utiliz/assets.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'BestSellerListItem.dart';
@@ -7,13 +8,6 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> list = [
-      "assets/images/9781504074360.jpg",
-      "assets/images/9781504074377.jpg",
-      "assets/images/9781504074384.jpg",
-      "assets/images/9781504074445.jpg",
-      "assets/images/9781504084666.jpg"
-    ];
     List<String> list1 = [
       "Jack Taylor",
       "Jack Reacher",
@@ -35,7 +29,7 @@ class BestSellerListView extends StatelessWidget {
       itemCount: 5,
       itemBuilder: (context, index) {
         return BestSellerListItem(
-          image: list[index],
+          image: AssetData.list[index],
           text1: list1[index],
           text2: list2[index],
         );

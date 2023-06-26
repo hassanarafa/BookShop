@@ -1,4 +1,6 @@
+import 'package:bookshop/core/utiliz/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utiliz/styles.dart';
 import 'CustomListViewItem.dart';
@@ -10,56 +12,61 @@ class BestSellerListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8),
-      child: SizedBox(
-        height: 160,
-        child: Row(
-          children: [
-            CustomListViewItem(
-              imagepath: image!,
-              aspect: 2.5 / 4,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    text1!,
-                    style: Styles.style2,
-                    maxLines: 2,
-                  ),
-                  const SizedBox(height: 5),
-                  Text(
-                    text2!,
-                    style: Styles.style2,
-                    maxLines: 2,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "19.99 €",
-                        style: Styles.style2,
-                      ),
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      const Icon(
-                        Icons.star,
-                        color: Colors.yellow,
-                        size: 35,
-                      ),
-                      Text(
-                        "4.8 (2390)",
-                        style: Styles.style2,
-                      )
-                    ],
-                  )
-                ],
+    return GestureDetector(
+      onTap: () {
+        GoRouter.of(context).push(AppRouter.kBookDetail);
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: SizedBox(
+          height: 160,
+          child: Row(
+            children: [
+              CustomListViewItem(
+                imagepath: image!,
+                aspect: 2.5 / 4,
               ),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      text1!,
+                      style: Styles.style2,
+                      maxLines: 2,
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      text2!,
+                      style: Styles.style2,
+                      maxLines: 2,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "19.99 €",
+                          style: Styles.style2,
+                        ),
+                        const SizedBox(
+                          width: 30,
+                        ),
+                        const Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                          size: 35,
+                        ),
+                        Text(
+                          "4.8 (2390)",
+                          style: Styles.style2,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

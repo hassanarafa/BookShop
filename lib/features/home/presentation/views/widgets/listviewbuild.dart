@@ -1,3 +1,4 @@
+import 'package:bookshop/core/utiliz/assets.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'CustomListViewItem.dart';
@@ -7,13 +8,6 @@ class ListViewBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> list = [
-      "assets/images/9781504074360.jpg",
-      "assets/images/9781504074377.jpg",
-      "assets/images/9781504074384.jpg",
-      "assets/images/9781504074445.jpg",
-      "assets/images/9781504084666.jpg"
-    ];
     return Padding(
       padding: const EdgeInsets.all(8),
       child: SizedBox(
@@ -24,7 +18,7 @@ class ListViewBuild extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (context, index) {
             return CustomListViewItem(
-              imagepath: list[index],
+              imagepath: AssetData.list[index],
               aspect: 0.7,
             );
           },
