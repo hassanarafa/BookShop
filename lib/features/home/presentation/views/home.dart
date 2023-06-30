@@ -19,7 +19,7 @@ class Homepage extends StatelessWidget {
             ),
           )
         ],
-        title: Text("BookShop", style: Styles.style1),
+        title: Text("BookShop", style: Styles.large),
       ),
       body: const HomePageBody(),
     );

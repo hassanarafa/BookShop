@@ -21,7 +21,7 @@ class HomePageBody extends StatelessWidget {
               padding: const EdgeInsets.all(15),
               child: Text(
                 "Best Seller",
-                style: Styles.style2,
+                style: Styles.small,
               ),
             ),
             const BestSellerListView(),

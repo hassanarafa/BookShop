@@ -8,20 +8,6 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> list1 = [
-      "Jack Taylor",
-      "Jack Reacher",
-      "Hieronymus Bosch",
-      "Bob Lee Swagger",
-      "Ben Kincaid"
-    ];
-    List<String> list2 = [
-      "Ken Bruen",
-      "Lee Child",
-      "Michael Connelly",
-      "Stephen Hunter",
-      "Willian Bernhardt"
-    ];
     return ListView.builder(
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
@@ -30,8 +16,8 @@ class BestSellerListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return BestSellerListItem(
           image: AssetData.list[index],
-          text1: list1[index],
-          text2: list2[index],
+          text1: AssetData.list1[index],
+          text2: AssetData.list2[index],
         );
       },
     );

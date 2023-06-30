@@ -5,6 +5,7 @@ import '../../features/home/presentation/views/book-details.dart';
 import '../../features/home/presentation/views/home.dart';
 
 abstract class AppRouter {
+  static var imagePATH = "", title = "", subtitle = "";
   static const kHomepage = "/homepage";
   static const kBookDetail = "/BookDetail";
   static final router = GoRouter(routes: [

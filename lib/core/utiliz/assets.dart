@@ -7,4 +7,18 @@ class AssetData {
     "assets/images/9781504074445.jpg",
     "assets/images/9781504084666.jpg"
   ];
+  static const List<String> list1 = [
+    "Jack Taylor",
+    "Jack Reacher",
+    "Hieronymus Bosch",
+    "Bob Lee Swagger",
+    "Ben Kincaid"
+  ];
+  static const List<String> list2 = [
+    "Ken Bruen",
+    "Lee Child",
+    "Michael Connelly",
+    "Stephen Hunter",
+    "Willian Bernhardt"
+  ];
 }
