@@ -1,17 +1,16 @@
-import 'package:bookshop/core/utiliz/assets.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'BestSellerListItem.dart';
+import '../../../../../core/utiliz/assets.dart';
+import '../../../../home/presentation/views/widgets/BestSellerListItem.dart';
 
-class CustomVerticalListView extends StatelessWidget {
-  const CustomVerticalListView({super.key});
+class SearchListViewItem extends StatelessWidget {
+  const SearchListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
-      physics: const NeverScrollableScrollPhysics(),
       itemCount: 5,
       itemBuilder: (context, index) {
         return BestSellerListItem(

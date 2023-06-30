@@ -24,7 +24,7 @@ class HomePageBody extends StatelessWidget {
                 style: Styles.small,
               ),
             ),
-            const BestSellerListView(),
+            const CustomVerticalListView(),
           ],
         ))
       ],
